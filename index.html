@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento Online | Rennovare Pisos</title>
+    <title>Orçamento Online | Assoalhos Classe A</title>
     
     <script>
     !function(f,b,e,v,n,t,s)
@@ -145,15 +145,15 @@
         <div class="container flex">
             <div class="logo">
                 <img src="logo.png" alt="Logo" onerror="this.style.display='none'"> 
-                <div>RENNOVARE <span style="color: var(--primary);">PISOS</span></div>
+                <div>ASSOALHOS <span style="color: var(--primary);">CLASSE A</span></div>
             </div>
-            <a href="https://wa.me/554796550517" target="_blank" class="btn-zap-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://wa.me/5511940030395" target="_blank" class="btn-zap-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Instalação EM <br> <span style="color: var(--primary);">ITAPEMA E REGIÃO</span></h1>
+            <h1>Instalação EM <br> <span style="color: var(--primary);">SÃO PAULO E REGIÃO</span></h1>
             <p>Faça seu orçamento em 30s - Garanta <strong style="color: #fff;">CONDIÇÕES EXCLUSIVAS</strong>.</p>
             
             <div class="calculator-box">
@@ -196,7 +196,7 @@
 
     <section class="features">
         <div class="container">
-            <h2>Por que escolher a <span style="color:var(--primary)">RENNOVARE</span>?</h2>
+            <h2>Por que escolher a <span style="color:var(--primary)">ASSOALHOS CLASSE A</span>?</h2>
             <div class="feature-grid">
                 <div class="feature-item">
                     <i class="fas fa-bolt"></i>
@@ -221,7 +221,7 @@
         <div class="container footer-row">
             <div class="footer-brand">
                 <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
-                <div>RENNOVARE <span style="color: var(--primary);">PISOS</span></div>
+                <div>ASSOALHOS <span style="color: var(--primary);">CLASSE A</span></div>
             </div>
             <div class="footer-text">
                 &copy; 2026. Desenvolvido por Legado Performance
@@ -268,7 +268,6 @@
             const valorFormatado = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.getElementById('valorFinal').innerText = valorFormatado;
 
-            // Ajustar lista de itens inclusos no modal
             let htmlInclusos = `<p style="margin-bottom:10px; font-weight:600;">O que está incluso no seu pacote:</p>`;
             
             if(tipoPiso === 'vinilico') {
@@ -287,8 +286,7 @@
             
             document.getElementById('listaInclusos').innerHTML = htmlInclusos;
             
-            // Texto WhatsApp
-            const textoZap = `Olá, Rennovare! Fiz um orçamento pelo site:\n\n` +
+            const textoZap = `Olá, Assoalhos Classe A! Fiz um orçamento pelo site:\n\n` +
                              ` *Metragem:* ${metragem}m²\n` +
                              ` *Piso:* ${modeloNome}\n` +
                              ` *Rodapé:* Incluso (5cm)\n` +
@@ -297,7 +295,7 @@
                              ` *Detalhes:* Atual: ${pisoAtual} / Nivelado: ${nivelamento}\n\n` +
                              `Quero agendar a visita técnica para confirmar.`;
             
-            const link = `https://wa.me/5511943893777?text=${encodeURIComponent(textoZap)}`;
+            const link = `https://wa.me/5511940030395?text=${encodeURIComponent(textoZap)}`;
             document.getElementById('linkZap').href = link;
             document.getElementById('modalResult').style.display = 'flex';
 
