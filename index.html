@@ -59,6 +59,7 @@
         .hero { background: linear-gradient(rgba(26, 26, 27, 0.85), rgba(26, 26, 27, 0.85)), url('fundo.jpg'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 90px 0 60px 0; }
         .hero h1 { font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; }
         .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1rem; margin-bottom: 25px; opacity: 0.9; }
 
         /* --- CALCULADORA --- */
         .calculator-box { background: white; color: var(--secondary); padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); max-width: 500px; margin: 0 auto; text-align: left; border-top: 5px solid var(--primary); }
@@ -73,6 +74,7 @@
         .features { padding: 50px 0; text-align: center; background: #fff; }
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
         .feature-item i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        .feature-item h3 { margin-bottom: 10px; font-size: 1.1rem; }
 
         /* --- MODAL --- */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; }
@@ -82,14 +84,11 @@
         .btn-action { display: flex; justify-content: center; align-items: center; gap: 8px; width: 100%; background: var(--accent); color: white; padding: 15px; text-decoration: none; font-weight: 700; border-radius: 8px; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
 
-        /* --- FOOTER (Ajustado) --- */
+        /* --- FOOTER (Logo Corrigido) --- */
         footer { background: var(--secondary); color: #ccc; padding: 25px 0; font-size: 0.8rem; }
         .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .footer-brand { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; text-transform: uppercase; }
-        
-        /* AQUI ESTÁ A SOLUÇÃO PARA O LOGO GIGANTE DO RODAPÉ */
         .footer-brand img { height: 30px; width: auto; display: block; }
-        
         .footer-text { text-align: right; opacity: 0.8; }
 
         @media (max-width: 480px) {
@@ -107,7 +106,7 @@
                 <img src="logo.png" alt="Logo" onerror="this.style.display='none'"> 
                 <div>ASSOALHOS <span style="color: var(--primary);">CLASSE A</span></div>
             </div>
-            <a href="https://wa.me/5511942893777" target="_blank" class="btn-zap-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://wa.me/5511943893777" target="_blank" class="btn-zap-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </header>
 
@@ -192,7 +191,6 @@
             const tipoPiso = modeloEl.options[modeloEl.selectedIndex].getAttribute('data-tipo');
             const modeloNome = modeloEl.options[modeloEl.selectedIndex].text.split('(')[0];
             const pisoAtual = document.getElementById('pisoAtual').value;
-            const nivelamento = document.getElementById('nivelamento').value;
 
             if (isNaN(metragem) || metragem < 1) {
                 alert("Por favor, digite uma metragem válida.");
@@ -209,7 +207,9 @@
             document.getElementById('listaInclusos').innerHTML = html;
 
             const textoZap = `Olá! Fiz um orçamento:\n*Metragem:* ${metragem}m²\n*Piso:* ${modeloNome}\n*Valor:* ${valorFormatado}\n*Piso Atual:* ${pisoAtual}\nQuero agendar visita.`;
-            document.getElementById('linkZap').href = `https://wa.me/5511942893777?text=${encodeURIComponent(textoZap)}`;
+            
+            // NÚMERO CORRIGIDO AQUI TAMBÉM (94389)
+            document.getElementById('linkZap').href = `https://wa.me/5511943893777?text=${encodeURIComponent(textoZap)}`;
             document.getElementById('modalResult').style.display = 'flex';
 
             if(typeof fbq === 'function') fbq('track', 'Lead', { value: total, currency: 'BRL' });
